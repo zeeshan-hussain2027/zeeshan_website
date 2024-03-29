@@ -16,15 +16,16 @@ body {
 
 #background {
     content: "";
-    position: fixed; /* changed from absolute to fixed to cover the whole viewport */
+    position: absolute; /* changed from absolute to fixed to cover the whole viewport */
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 178%;
     background-image: url('../img/zweb_bg1.png'); /* Default background image */
     background-size: cover;
-    opacity: 0.4;
+    opacity: 0.5;
     z-index: -1;
+
 }
 
 .introcontainer {
@@ -67,8 +68,8 @@ body {
     border-radius: 10px;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 3%;
+    margin-bottom: 3%;
     padding: 1% 0.5%;
     width: 20%;
     height: 40%;
@@ -101,4 +102,24 @@ body {
     display: block;
     margin: 0 auto;
     height: auto;
+  }
+
+  .imagedisplay {
+    background-color: rgba(255, 255, 255, 0);
+    overflow: auto;
+    white-space: nowrap;
+    padding: 6px;
+  }
+
+  .focusedimage {
+    display: inline-block;
+    text-align: center;
+    width: 27%;
+    margin: 2% 3%;
+  }
+
+  .imagedisplay::after {
+    content: "";
+    clear: both;
+    display: table;
   }
